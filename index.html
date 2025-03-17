@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Banco Gelocorp</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Bienvenido a Banco Gelocorp. Gracias por contar con nosotros.</h1>
+
+    <label for="cuenta">Selecciona una cuenta:</label>
+    <select id="cuenta">
+      <option value="0">Lala</option>
+      <option value="1">Angelo</option>
+      <option value="2">Sara</option>
+    </select>
+
+    <label for="password">Introduce tu contraseña:</label>
+    <input type="password" id="password" placeholder="Contraseña">
+
+    <button onclick="verificarPassword()">Entrar</button>
+
+    <div id="opciones" style="display:none;">
+      <h2>Selecciona tu operación:</h2>
+      <button onclick="consultarSaldo()">Consultar Saldo</button>
+      <button onclick="mostrarOpcionesIngresar()">Ingresar Monto</button>
+      <button onclick="mostrarOpcionesRetirar()">Retirar Monto</button>
+    </div>
+
+    <div id="opcionesIngresar" style="display:none;">
+      <h3>Ingresar monto:</h3>
+      <div class="montos-rapidos">
+        <button onclick="ingresarMonto(20)">$20</button>
+        <button onclick="ingresarMonto(50)">$50</button>
+        <button onclick="ingresarMonto(100)">$100</button>
+        <button onclick="ingresarMonto(200)">$200</button>
+        <button onclick="ingresarMonto(500)">$500</button>
+        <button onclick="ingresarMonto()">Otro monto</button>
+      </div>
+    </div>
+
+    <div id="opcionesRetirar" style="display:none;">
+      <h3>Retirar monto:</h3>
+      <div class="montos-rapidos">
+        <button onclick="retirarMonto(20)">$20</button>
+        <button onclick="retirarMonto(50)">$50</button>
+        <button onclick="retirarMonto(100)">$100</button>
+        <button onclick="retirarMonto(200)">$200</button>
+        <button onclick="retirarMonto(500)">$500</button>
+        <button onclick="retirarMonto()">Otro monto</button>
+      </div>
+    </div>
+
+    <div id="resultado"></div>
+  </div>
+
+  <script src="/assets/js/cajero.js"></script>
+</body>
+</html>
